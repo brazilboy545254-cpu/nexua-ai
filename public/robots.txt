@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /chat
+Disallow: /projects
+Disallow: /settings
+Sitemap: https://nexua.ai/sitemap.xml

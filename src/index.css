@@ -1,0 +1,137 @@
+@import 'highlight.js/styles/github-dark.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: 240 17% 4%;
+  --foreground: 210 20% 98%;
+  --card: 238 14% 9%;
+  --card-foreground: 210 20% 98%;
+  --popover: 238 14% 9%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 249 100% 68%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 174 66% 45%;
+  --secondary-foreground: 222 47% 8%;
+  --muted: 235 12% 16%;
+  --muted-foreground: 224 12% 68%;
+  --accent: 84 61% 53%;
+  --accent-foreground: 222 47% 8%;
+  --destructive: 0 73% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 232 12% 22%;
+  --input: 232 12% 22%;
+  --ring: 249 100% 68%;
+  --radius: 8px;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --background: 45 29% 97%;
+  --foreground: 228 16% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 228 16% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 228 16% 12%;
+  --primary: 249 73% 57%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 176 64% 38%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 220 14% 92%;
+  --muted-foreground: 226 11% 39%;
+  --accent: 87 58% 42%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 13% 84%;
+  --input: 220 13% 84%;
+  --ring: 249 73% 57%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  min-height: 100%;
+  background: hsl(var(--background));
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.nexua-grid-bg {
+  background:
+    linear-gradient(hsl(var(--border) / 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.18) 1px, transparent 1px),
+    radial-gradient(circle at 18% 12%, hsl(var(--primary) / 0.16), transparent 24rem),
+    radial-gradient(circle at 82% 18%, hsl(var(--secondary) / 0.12), transparent 20rem),
+    hsl(var(--background));
+  background-size:
+    42px 42px,
+    42px 42px,
+    auto,
+    auto,
+    auto;
+}
+
+.prose-nexua {
+  color: hsl(var(--foreground));
+}
+
+.prose-nexua :where(p, ul, ol) {
+  margin-block: 0.7rem;
+}
+
+.prose-nexua :where(h1, h2, h3) {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.prose-nexua :where(a) {
+  color: hsl(var(--secondary));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-nexua :where(code):not(pre code) {
+  border-radius: 4px;
+  background: hsl(var(--muted));
+  padding: 0.1rem 0.35rem;
+}
+
+.ad-slot {
+  min-height: 90px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px dashed hsl(var(--border));
+  background: hsl(var(--muted) / 0.38);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
